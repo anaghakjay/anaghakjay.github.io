@@ -1,0 +1,171 @@
+.title {
+  margin-bottom: 0
+}
+
+.title, h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18.2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(0, 51, 51);
+}
+
+.listings h1 {
+}
+
+.listings h1 span {
+  border: 1px solid red;
+  border-radius: 100%;
+  display: inline-block;
+  height: 25px;
+  line-height: 1;
+  padding-left: 6px;
+  padding-top: 4px;
+  width: 25px
+}
+
+.small {
+  color: #4d4d4d;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px
+}
+
+a {
+  color: #00853e;
+  text-decoration: none
+}
+
+a:hover {
+  color: #f45252
+}
+
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.listings, .map {
+  height: 50%;
+  position: absolute;
+  width: 100%
+}
+
+.map {
+  top: 0
+}
+
+h1 {
+  top: 50%
+}
+
+.listings {
+  background: #f45252;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  top: 50%;
+  z-index: 100
+}
+
+
+@media (min-width: 700px) {
+  .map {
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    width: 100%
+  }
+
+  h1 {
+    background: #D3696C;
+    left: 0;
+    padding: 10px 15px 0;
+    position: fixed;
+  }
+
+  h1, .listings {
+    max-width: 350px;
+    min-width: 240px;
+    top: 0;
+    width: 30%
+  }
+
+  .mb-watermark {
+    bottom: 0;
+    margin-left: 31%
+  }
+
+  .listings {
+    background: rgb(193, 67, 67, 0.8);
+    /* border-right: 1px solid rgb(193, 67, 67, 0.8); */
+    bottom: 0;
+    height: 100%;
+    padding-bottom: 100vh
+  }
+
+  .listings .legend {
+    padding-top: 3em
+  }
+}
+
+@media (min-width: 1180px) {
+  .mb-watermark {
+    margin-left: 360px
+  }
+}
+
+.item {
+  display: block;
+  padding: 10px 15px
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid rgb(193, 67, 67, 0.8)
+}
+
+.title {
+  display: block
+}
+
+.item-details {
+  display: none;
+  opacity: 0
+}
+
+.legend {
+  background: #D3696C;
+  border-bottom: 1px solid #fff;
+  color: #f8f8f8;
+  margin-bottom: 10px
+}
+
+.item:not(.active) .marker {
+  color: rgba(248, 248, 248, 0.5)
+}
+
+.listings .active .title, .listings .title:hover {
+  color: #1111111
+}
+
+.listings .active {
+  background-color: #FFAAAA
+}
+
+.listings .active .item-details {
+  -webkit-animation: show .5s forwards;
+  animation: show .5s forwards;
+  display: block;
+  font-size: 14px
+}
+
+
+@keyframes show {
+  to {
+    opacity: 1
+  }
+}
